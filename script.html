@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+    <header>
+    <h1>👨 entre em contato comigo !</h1>
+    <nav>
+      <a href="gostos.html">Gostos Pessoais</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </header>
+</body>
+</html>
+<form id="formContato">
+  <input id="nome" name="nome" placeholder="Seu nome" required />
+  <input id="assunto" name="assunto" placeholder="Assunto" required />
+  <textarea id="mensagem" name="mensagem" placeholder="Mensagem" required></textarea>
+  <button type="submit">Enviar no WhatsApp</button>
+</form>
+
+<script>
+  // número de destino (Brasil = 55 + DDD + número)
+  const NUMERO_DESTINO = "5592988286481";
+
+  document.getElementById('formContato').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const nome = document.getElementById('nome').value.trim();
+    const assunto = document.getElementById('assunto').value.trim();
+    const mensagem = document.getElementById('mensagem').value.trim();
+
+    if (!nome || !assunto || !mensagem) {
+      alert('Preencha todos os campos antes de enviar.');
+      return;
+    }
+
+    const texto = `Olá! Meu nome é ${nome}.\nAssunto: ${assunto}\n\n${mensagem}`;
+    const url = `https://wa.me/${NUMERO_DESTINO}?text=${encodeURIComponent(texto)}`;
+
+    // Abre o WhatsApp Web ou App
+    window.open(url, '_blank');
+  });
+</script>

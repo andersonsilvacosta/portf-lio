@@ -1,0 +1,88 @@
+.foto-pequena {
+  width: 140px;
+  height: auto;
+  display: block;
+  margin: 10px auto;
+  border-radius: 8px;
+  float: right;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+  ali
+}
+header {
+  background-color: #333;
+  color: white;
+  padding: 15px;
+}
+
+nav a {
+  margin-right: 15px;
+  color: #fff;
+  text-decoration: none;
+}
+
+section {
+  margin-top: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+form input, form textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+}
+
+#formContato {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+#formContato input,
+#formContato textarea {
+  width: 100%;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+#formContato input:focus,
+#formContato textarea:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+#formContato textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+#formContato button {
+  width: 100%;
+  padding: 14px;
+  background-color: #25D366;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#formContato button:hover {
+  background-color: #1ebe5d;
+}
